@@ -1,0 +1,15 @@
+#main-container {
+    height: 500px;
+    width: 500px;
+    border: 2px solid pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    color: white;
+    font-size: 2rem;
+}
+body {
+    display: flex;
+    justify-content: center;
+}
