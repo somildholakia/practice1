@@ -9,3 +9,9 @@ function buy(){
     change_text.innerHTML += "<p> Thank you for buyings</p>"
     console.log("purchased")
 }
+
+
+const recipient = "somil"
+
+const email = `Hey ${recipient}! How is it going? Cheers ritik`
+console.log(email)
