@@ -18,3 +18,7 @@ p{
     color: black;
     size: 2rem;
 }
+
+button {
+    height: 60px;
+}
