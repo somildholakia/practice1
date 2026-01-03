@@ -15,3 +15,12 @@ const recipient = "somil"
 
 const email = `Hey ${recipient}! How is it going? Cheers ritik`
 console.log(email)
+
+
+function logAnswer(a1,a2){
+    console.log(`The answer is ${a1} of course! If you got that right, give yourself ${a2}.`)
+}
+
+console.log("What is the capital of peru")
+
+setTimeout(logAnswer,4000,'meeee','chocolate')
