@@ -24,3 +24,12 @@ function logAnswer(a1,a2){
 console.log("What is the capital of peru")
 
 setTimeout(logAnswer,4000,'meeee','chocolate')
+
+
+const speedWarning = speed => {
+    console.log(speed)
+    return `you are going at a very high speed `
+    
+}
+
+speedWarning(40)
