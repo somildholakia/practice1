@@ -32,4 +32,4 @@ const speedWarning = speed => {
     
 }
 
-speedWarning(40)
+console.log(speedWarning(40))
