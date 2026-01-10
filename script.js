@@ -1,33 +1,23 @@
-async function getApi(){
-    try {
-    const response = await fetch("https://apis.scrimba.com/jsonplaceholder/posts",
-        {
-            method: 'POST',
-            body: JSON.stringify({
-                title: 'holiday nightmares',
-                body: 'When i was Kidnapped in scotland',
-                id: 100
-            }),
+function getImg(url){
+    return new Promise((resolve,reject) => {
+        const image = new Image()
+        image.src = url
+        image.alt = "A Dog Photo"
 
-            headers: {
-                'Content-Type': "application/json",
-                'Accept': "application/json"
-            }
-
+        image.addEventListener("load", ()=> {
+            resolve(image)
         })
-
-   
-
-    if(!response.ok){
-        throw new Error(`Error occured: ${response.status}`)
-    }
-
-    const data = await response.json()
-    console.log(data)
-    } catch(err) {
-        console.log("error:",err)
-    }
-
+        image.addEventListener("error", ()=> {
+            reject("Image not loaded")
+        })
+    })
 }
 
-getApi()
+try {
+    const result = await getImg("https://dog.ceo/img/dog-api-fb.jpg")
+    console.log(result)
+
+    document.getElementById("main-container").appendChild(result)
+} catch(error){
+    console.log(error)
+}
