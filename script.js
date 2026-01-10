@@ -1,8 +1,17 @@
+async function getApi() {
+    try {
+        const response = await fetch("https://dog.ceo/api/breeds/image/random")
 
-async function getApi(){
-   const response = await fetch('https://apis.scrimba.com/bored/api/activity')
-   const data = await response.json()
-   console.log(data)
+        if(!response.ok){
+            throw new Error(`Http error: ${response.status}`)
+        }
+
+        const data = await response.json()
+        console.log(data)
+    } catch (err) {
+        console.log("error occured",err)
+    } 
 }
+
 
 getApi()
