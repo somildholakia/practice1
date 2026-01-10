@@ -33,3 +33,6 @@ const speedWarning = speed => {
 }
 
 console.log(speedWarning(40))
+
+let link = url(https://apis.scrimba.com/dog.ceo/api/breeds/image/random)
+console.log(link)
