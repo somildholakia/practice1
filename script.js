@@ -7,8 +7,16 @@ async function getApi(){
                 title: 'holiday nightmares',
                 body: 'When i was Kidnapped in scotland',
                 id: 100
-            })
+            }),
+
+            headers: {
+                'Content-Type': "application/json",
+                'Accept': "application/json"
+            }
+
         })
+
+   
 
     if(!response.ok){
         throw new Error(`Error occured: ${response.status}`)
